@@ -1,13 +1,21 @@
+// import Cybrome from "./Cybrome";
+// import Footer from "./Footer";
+// import Header from "./Header";
+//import Student from "./Student";
+// import College from "./College";
+//  const Name = "patel college";
+//  const st = "60";
+//  const add = "bhopal";
 import Cybrome from "./Cybrome";
+const 
 
- const App=()=>{
+const App=()=>{
     return(
-        <p>
-        <h1> Hii i am Ankita from waghoda</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia enim, ipsum voluptatum ipsam aperiam consequatur vel sint dignissimos.
-            g Natus praesentium id beatae enim nam, magni doloribus fuga voluptas incidunt itaque.</p>
-        <Cybrome/>
-        </p>
+    <>
+    <h1>Welcome</h1>
+    
+    </>
     )
 }
+
 export default App;
