@@ -1,0 +1,14 @@
+body{
+    background-color: aqua;
+}
+
+.data{
+    background-color: yellowgreen;
+    text-decoration: underline;
+
+
+}
+#data1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+}
