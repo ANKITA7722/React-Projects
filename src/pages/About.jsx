@@ -1,24 +1,17 @@
-import { Link,Outlet } from "react-router-dom";
-
-const About=()=>{
+const name=["ankita " ,"reshmi","shushila"]
+const App= ()=>{
+    const ans= name.map((key)=>{
+        return(
+            <>
+            <h1>{key}</h1>
+            </>
+        )
+    })
     return(
         <>
-        <h1>about us</h1>
-        <table border="1" width="90%" align="center">
-            <tr>
-                <td width="20%">
-                    <Link  to="aboutcompany">About Company</Link>
-                        <br/>
-                        <br/>
-                    <Link  to="aboutproduct">About product</Link>
-                </td>
-                <td width="80%">
-                    <Outlet/>
-                </td>
-            </tr>
-        </table>
-        
+        <h1>hellow world</h1>
         </>
     )
+
 }
-export default About;
+export default App;
