@@ -1,13 +1,13 @@
-const EmpDesingn=(props)=>{
+const EmpDesign=(props)=>{
     return(
         <>
-        <tr>
-        <th>{props.eno}</th>
-        <th>{props.nm}</th>
-        <th> {props.dpt}</th>
-        <th> {props.sal}</th>
-        </tr>
+            <tr>
+                <th>{props.empno}</th>
+                <th>{props.name}</th>
+                <th>{props.dept}</th>
+                <th>{props.sal}</th>
+            </tr>
         </>
     )
 }
-export default EmpDesingn;
+export default EmpDesign;

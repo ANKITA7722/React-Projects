@@ -36,31 +36,27 @@
 // export default App;
 
 // 
-
-import EmpDesingn from "./EmpDesign"
-import EmpData from "./EmpData"; 
-const App = () =>{
-  const ans= EmpData.map((key)=> <EmpDesingn
-  eno={key.empno}
-  nm={key.name}
-  dept={key.dept}
-  sal={key.salary}
-  />)
+import EmpData from "./EmpData";
+import EmpDesign from "./EmpDesign";
+const App=()=>{
+  const ans=EmpData.map((key)=><EmpDesign 
+    empno={key.empno} 
+    name={key.name}
+    dept={key.dept}
+    sal={key.salary}
+  />
+)
   return(
     <>
-    <tr>
-      <th>Employeenumber</th>
-      <th>name</th>
-      <th>deparment</th>
-      <th>salary</th>
-    </tr>
-    </>
-  )
-  return(
-    <>
-     <table>
-        
-     </table>
+      <table border={2}>
+        <tr>
+          <th>employee name</th>
+          <th>name</th>
+          <th>deparment</th>
+          <th>salary</th>
+        </tr>
+        {ans}
+      </table>
     </>
   )
 }
