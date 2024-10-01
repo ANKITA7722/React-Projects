@@ -1,15 +1,16 @@
-const name=["ankita " ,"reshmi","shushila"]
-const App= ()=>{
-    const ans= name.map((key)=>{
-        return(
+const name = ["ankita ", "reshmi", "shushila"]
+const App = () => {
+    const ans = name.map((key) => {
+        return (
             <>
-            <h1>{key}</h1>
+                <h1>{key}</h1>
             </>
         )
     })
-    return(
+    return (
         <>
-        <h1>hellow world</h1>
+            <h1>hellow world</h1>
+            {ans}
         </>
     )
 

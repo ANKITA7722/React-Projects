@@ -26,64 +26,42 @@
 
 //             <Route path="Contact" element={<Contact />} />
 //             <Route path="*" element={<NoPage />} />
-            
+
 //           </Route>
 //         </Routes>
 //       </BrowserRouter>
 //     </>
 //   )
-// }
+// }  
 // export default App;
 
+// 
 
-const student=[
-  {rollno:121,
-    name:"ankita",
-    city:"bhopal"
-  },
-  {rollno:121,
-    name:"ankita",
-    city:"bhopal"
-  },
-  {rollno:121,
-    name:"ankita",
-    city:"bhopal"
-  }
-]
-const App= ()=>{
- // const ans= name.map((key => <li>{key}</li>)or
-    const ans= student.map((key)=>{
-        return(
-            <>
-            <tr>
-              
-            </tr>
-            </>
-        )
-    })
-
-    const ans1= name.map(function(key){
-      return(
-          <>
-          <li>{key}</li>
-          </>
-      )
-  })
-    return(
-        <>
-        <h1>hellow world</h1>
-        <ol >
-        {ans}
-        </ol>
-        <ul type="circle">
-        {ans1}
-        </ul>
+import EmpDesingn from "./EmpDesign"
+import EmpData from "./EmpData"; 
+const App = () =>{
+  const ans= EmpData.map((key)=> <EmpDesingn
+  eno={key.empno}
+  nm={key.name}
+  dept={key.dept}
+  sal={key.salary}
+  />)
+  return(
+    <>
+    <tr>
+      <th>Employeenumber</th>
+      <th>name</th>
+      <th>deparment</th>
+      <th>salary</th>
+    </tr>
+    </>
+  )
+  return(
+    <>
+     <table>
         
-        </>
-    )
-
+     </table>
+    </>
+  )
 }
 export default App;
-
-
-
