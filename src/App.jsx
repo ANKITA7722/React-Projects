@@ -35,29 +35,64 @@
 // }  
 // export default App;
 
-// 
-import EmpData from "./EmpData";
-import EmpDesign from "./EmpDesign";
+//
+import { useState } from "react"; 
+
+// const App=()=>{
+
+//     const [name,setName]=useState("ankita");//varble ki intialization state hai
+//     const myname=()=>{
+//       setName=("rupali")
+//     }
+  
+//   return(
+//     <>
+//       <h1>welcom to cybrom</h1>
+//       <h1>My name : {name}</h1>
+//       <button onClick={myname}>click here</button>
+//     </>
+//   )
+// }
+// export default App;
+
+// const App=()=>{
+
+//   const [color,setColor]=useState("Red");//varble ki intialization state hai
+
+// return(
+//   <>
+//     <h1 style={{color:color}}>My name : {color}</h1>
+//     <button onClick={()=>{setColor("Green")}}>click here</button>
+//     <button onClick={()=>{setColor("Pink")}}>click here</button>
+//     <button onClick={()=>{setColor("Gray")}}>click here</button>
+//     <button onClick={()=>{setColor("blue")}}>click here</button>
+//     <button onClick={()=>{setColor("yellow")}}>click here</button>
+
+//   </>
+// )
+// }
+// export default App;
+
 const App=()=>{
-  const ans=EmpData.map((key)=><EmpDesign 
-    empno={key.empno} 
-    name={key.name}
-    dept={key.dept}
-    sal={key.salary}
-  />
-)
-  return(
-    <>
-      <table border={2}>
-        <tr>
-          <th>employee name</th>
-          <th>name</th>
-          <th>deparment</th>
-          <th>salary</th>
-        </tr>
-        {ans}
-      </table>
-    </>
-  )
-}
-export default App;
+
+      const [cnt,setCnt]=useState(0);//varble ki intialization state hai
+      const myDecreament=()=>{
+        if(cnt<=1)
+        {
+          alert(" dont go minuse ")
+        }else{
+          alert(cnt-1)
+        }
+      }
+    
+    return(
+      <>
+        <h1>Count App</h1>
+        <h1>count :{cnt}</h1>
+        <button onClick={()=>{setCnt(cnt+1)}}>increament</button>
+        <button onClick={myDecreament}>decreament</button>
+        <button onClick={()=>{setCnt(0)}}>reset</button>
+      </>
+    )
+  }
+  export default App;

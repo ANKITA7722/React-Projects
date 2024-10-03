@@ -6,19 +6,19 @@ const EmpData = [
     "sal" :"123456"  
   },
   {
-    "empno": 121,
+    "empno": 122,
+    "name": "karina",
+    "dept" :"",
+    "sal" :"123456"  
+  },
+  {
+    "empno": 123,
     "name": "ankita",
     "dept" :"finance",
     "sal" :"123456"  
   },
   {
-    "empno": 121,
-    "name": "ankita",
-    "dept" :"finance",
-    "sal" :"123456"  
-  },
-  {
-    "empno": 121,
+    "empno": 124,
     "name": "ankita",
     "dept" :"finance",
     "sal" :"123456"  
