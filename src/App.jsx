@@ -119,21 +119,41 @@
 
 
 
-import { useState,useEffect } from "react"; 
-const App=()=>{
-  const [cnt,setCnt]=useState(0);
-  const [abc,setAbc]=useState(0);
+// import { useState,useEffect } from "react"; 
+// const App=()=>{
+//   const [cnt,setCnt]=useState(0);
+//   const [abc,setAbc]=useState(0);
 
-  useEffect(()=>{
-    setAbc(cnt*2);
-  },[cnt]);
+//   useEffect(()=>{
+//     setAbc(cnt*2);
+//   },[cnt]);
    
-return(
-  <>
-  <h1>welcom:{cnt}</h1>
-  <h1>Multiply:{abc}</h1>
-    <button onClick={()=>{setCnt(cnt+1)}}>click here</button>
-  </>
-)
+// return(
+//   <>
+//   <h1>welcom:{cnt}</h1>
+//   <h1>Multiply:{abc}</h1>
+//     <button onClick={()=>{setCnt(cnt+1)}}>click here</button>
+//   </>
+// )
+// }
+// export default App;
+
+
+
+import { useState } from "react"
+
+const App=()=>{
+  const[input, setInput]=useState({ });// input={ }
+
+  const handleInput=(e)=>{
+    let name=e.target.name;
+    let value=e.target.value;
+    // console.log({[name]:value});
+    //setInput({[name]:value})
+    setInput((values)=>({...values, [name]:value}));//sread oprater(...)
+    console.log(input);
+  }
+  const handleSubmit=()=>{
+    console.log(input);
+  }
 }
-export default App;
