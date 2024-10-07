@@ -138,34 +138,59 @@
 // }
 // export default App;
 
-
-
 import { useState } from "react";
 const App=()=>{
-  const [input,setInput] =useState({}); //input={}
-  //input={name:"raju","city":"bhopal",contact:123456, email:"admin@gmail.com"}
-  const handleInput=(e)=>{
-    let name=e.target.name;
-    let value=e.target.value; 
+  const [name, setName]=useState("");
+  const [city,setCity]=useState("");
+  const [email,setEmail]=useState("");
 
-
-    setInput((values)=>({...values,[name]:value}));
-    console.log(input);
-  }
-  const handleSubmit=()=>{
-    console.log(input);
-  }
   return(
     <>
     <h1>Application Form</h1>
-    Enter name: <input type="text" name="stunm" value={input.stunm} onChange={handleInput} />
-    <br/>
-    Enter city: <input type="text" name="city" value={input.city} onChange={handleInput} />
-    <br/>
-    Enter contact: <input type="text" name="contact" value={input.contact} onChange={handleInput} />
-    <br/>
-    <button onClick={handleSubmit}>data save</button>
+    Enter name : <input type="text"  value={name} onChange={(e)=>setName(e.target.value)}/>
+    <br/><br/>
+    Enter city : <input type="text"  value={city} onChange={(e)=>setCity(e.target.value)}/>
+    <br/><br/>
+    Enter email : <input type="text"  value={email} onChange={(e)=>setEmail(e.target.value)}/>
+    <br/><br/>
+    <button >save data</button>
     </>
   )
 }
 export default App;
+
+
+
+
+
+// import { useState } from "react";
+// const App=()=>{
+//   const [input,setInput] =useState({}); //input={}
+//   //input={name:"raju","city":"bhopal",contact:123456, email:"admin@gmail.com"}
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value; 
+
+
+//     setInput((values)=>({...values,[name]:value}));
+//     console.log(input);
+//   }
+//   const handleSubmit=()=>{
+//     console.log(input);
+//   }
+//   return(
+//     <>
+//     <h1>Application Form</h1>
+//     Enter name: <input type="text" name="stunm" value={input.stunm} onChange={handleInput} />
+//     <br/>
+//     Enter city: <input type="text" name="city" value={input.city} onChange={handleInput} />
+//     <br/>
+//     Enter contact: <input type="text" name="contact" value={input.contact} onChange={handleInput} />
+//     <br/>
+//     <button onClick={handleSubmit}>data save</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
