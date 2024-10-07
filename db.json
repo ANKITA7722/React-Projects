@@ -1,0 +1,32 @@
+{
+    "Student":[
+        {
+            "id":1,
+            "rollno":1234,
+            "name":"rohit",
+            "city":"bhopal",
+            "fees":10000
+        },
+        {
+            "id":2,
+            "rollno":2345,
+            "name":"rakesh",
+            "city":"ghoti",
+            "fees":20000
+        },
+        {
+            "id":3,
+            "rollno":3456,
+            "name":"madhur",
+            "city":"nanda",
+            "fees":30000
+        },
+        {
+            "id":4,
+            "rollno":45678,
+            "name":"rupesh",
+            "city":"koradi",
+            "fees":40000
+        }
+    ]
+}

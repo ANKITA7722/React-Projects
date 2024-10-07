@@ -35,6 +35,9 @@
 // }  
 // export default App;
 
+
+
+
 //
 // import { useState } from "react"; 
 
@@ -138,26 +141,26 @@
 // }
 // export default App;
 
-import { useState } from "react";
-const App=()=>{
-  const [name, setName]=useState("");
-  const [city,setCity]=useState("");
-  const [email,setEmail]=useState("");
+// import { useState } from "react";
+// const App=()=>{
+//   const [name, setName]=useState("");
+//   const [city,setCity]=useState("");
+//   const [email,setEmail]=useState("");
 
-  return(
-    <>
-    <h1>Application Form</h1>
-    Enter name : <input type="text"  value={name} onChange={(e)=>setName(e.target.value)}/>
-    <br/><br/>
-    Enter city : <input type="text"  value={city} onChange={(e)=>setCity(e.target.value)}/>
-    <br/><br/>
-    Enter email : <input type="text"  value={email} onChange={(e)=>setEmail(e.target.value)}/>
-    <br/><br/>
-    <button >save data</button>
-    </>
-  )
-}
-export default App;
+//   return(
+//     <>
+//     <h1>Application Form</h1>
+//     Enter name : <input type="text"  value={name} onChange={(e)=>setName(e.target.value)}/>
+//     <br/><br/>
+//     Enter city : <input type="text"  value={city} onChange={(e)=>setCity(e.target.value)}/>
+//     <br/><br/>
+//     Enter email : <input type="text"  value={email} onChange={(e)=>setEmail(e.target.value)}/>
+//     <br/><br/>
+//     <button >save data</button>
+//     </>
+//   )
+// }
+// export default App;
 
 
 
@@ -194,3 +197,100 @@ export default App;
 // export default App;
 
 
+
+// import { useState, useEffect } from "react";
+// import axios from "axios";
+
+// const App=()=>{
+// const [mydata,setMydata]=useState([]);
+// const loadData=()=>{
+//   let api= "http://localhost:3000/Student";
+//   axios.get(api).then((res)=>{
+//     setMydata(res.data);
+//     console.log(res.data);
+//   });
+// }
+// useEffect(()=>{
+//   loadData();
+// },[])
+// const ans=mydata.map((key)=>{
+//   return(
+//     <>
+//     <tr>
+//       <td>{key.rollno}</td>
+//       <td>{key.name}</td>
+//       <td>{key.city}</td>
+//       <td>{key.fees}</td>
+//     </tr>
+//     </>
+//   )
+// })
+// return(
+//   <>
+//     <table>
+//       <tr>
+//         <th>rollno</th>
+//         <th>name</th>
+//         <th>city</th>
+//         <th>fees</th>
+//       </tr>
+//       {ans}
+//     </table>
+//   </>
+// ) 
+// }
+// export default App;
+
+
+// 
+
+
+
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+const App=()=>{
+const [mydata,setMydata]=useState([]);
+
+const loadData = async()=>{
+  let api= "http://localhost:3000/Student";
+
+  try{
+    const response = await axios.get(api);
+    setMydata(response.data);
+    console.log(response);
+  }catch(error){
+    console.log("server not Found");
+  }
+  }
+
+useEffect(()=>{
+  loadData();
+},[])
+const ans=mydata.map((key)=>{
+  return(
+    <>
+    <tr>
+      <td>{key.rollno}</td>
+      <td>{key.name}</td>
+      <td>{key.city}</td>
+      <td>{key.fees}</td>
+    </tr>
+    </>
+  )
+})
+return(
+  <>
+    <table border={2}>
+      <tr>
+        <th>rollno</th>
+        <th>name</th>
+        <th>city</th>
+        <th>fees</th>
+      </tr>
+      {ans}
+    </table>
+  </>
+) 
+}
+export default App;
