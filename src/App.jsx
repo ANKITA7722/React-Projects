@@ -140,20 +140,32 @@
 
 
 
-import { useState } from "react"
-
+import { useState } from "react";
 const App=()=>{
-  const[input, setInput]=useState({ });// input={ }
-
+  const [input,setInput] =useState({}); //input={}
+  //input={name:"raju","city":"bhopal",contact:123456, email:"admin@gmail.com"}
   const handleInput=(e)=>{
     let name=e.target.name;
-    let value=e.target.value;
-    // console.log({[name]:value});
-    //setInput({[name]:value})
-    setInput((values)=>({...values, [name]:value}));//sread oprater(...)
+    let value=e.target.value; 
+
+
+    setInput((values)=>({...values,[name]:value}));
     console.log(input);
   }
   const handleSubmit=()=>{
     console.log(input);
   }
+  return(
+    <>
+    <h1>Application Form</h1>
+    Enter name: <input type="text" name="stunm" value={input.stunm} onChange={handleInput} />
+    <br/>
+    Enter city: <input type="text" name="city" value={input.city} onChange={handleInput} />
+    <br/>
+    Enter contact: <input type="text" name="contact" value={input.contact} onChange={handleInput} />
+    <br/>
+    <button onClick={handleSubmit}>data save</button>
+    </>
+  )
 }
+export default App;
