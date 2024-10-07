@@ -245,7 +245,7 @@
 // 
 
 
-
+//installation command axios:-npm i axios
 import { useState, useEffect } from "react";
 import axios from "axios";
 
