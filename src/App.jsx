@@ -46,7 +46,7 @@
 //     const myname=()=>{
 //       setName=("rupali")
 //     }
-  
+
 //   return(
 //     <>
 //       <h1>welcom to cybrom</h1>
@@ -87,7 +87,7 @@
 //           setCnt(cnt-1)
 //         }
 //       }
-    
+
 //     return(
 //       <>
 //         <h1>Count App</h1>
@@ -112,7 +112,7 @@
 // return(
 //   <>
 //   <h1>welcom:{cnt}</h1>
-    
+
 //   </>
 // )
 // }
@@ -130,7 +130,7 @@
 //   useEffect(()=>{
 //     setAbc(cnt*2);
 //   },[cnt]);
-   
+
 // return(
 //   <>
 //   <h1>welcom:{cnt}</h1>
@@ -249,48 +249,48 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const App=()=>{
-const [mydata,setMydata]=useState([]);
+const App = () => {
+  const [mydata, setMydata] = useState([]);
 
-const loadData = async()=>{
-  let api= "http://localhost:3000/Student";
+  const loadData = async () => {
+    let api = "http://localhost:3000/Student";
 
-  try{
-    const response = await axios.get(api);
-    setMydata(response.data);
-    console.log(response);
-  }catch(error){
-    console.log("server not Found");
+    try {
+      const response = await axios.get(api);
+      setMydata(response.data);
+      console.log(response);
+    } catch (error) {
+      console.log("server not Found");
+    }
   }
-  }
 
-useEffect(()=>{
-  loadData();
-},[])
-const ans=mydata.map((key)=>{
-  return(
+  useEffect(() => {
+    loadData();
+  }, [])
+  const ans = mydata.map((key) => {
+    return (
+      <>
+        <tr>
+          <td>{key.rollno}</td>
+          <td>{key.name}</td>
+          <td>{key.city}</td>
+          <td>{key.fees}</td>
+        </tr>
+      </>
+    )
+  })
+  return (
     <>
-    <tr>
-      <td>{key.rollno}</td>
-      <td>{key.name}</td>
-      <td>{key.city}</td>
-      <td>{key.fees}</td>
-    </tr>
+      <table border={2}>
+        <tr>
+          <th>rollno</th>
+          <th>name</th>
+          <th>city</th>
+          <th>fees</th>
+        </tr>
+        {ans}
+      </table>
     </>
   )
-})
-return(
-  <>
-    <table border={2}>
-      <tr>
-        <th>rollno</th>
-        <th>name</th>
-        <th>city</th>
-        <th>fees</th>
-      </tr>
-      {ans}
-    </table>
-  </>
-) 
 }
 export default App;
