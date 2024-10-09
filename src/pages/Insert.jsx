@@ -2,11 +2,12 @@ import axios from "axios";
 import { useState } from "react";
 
 
-const Home=()=>{
+const Insert=()=>{
+    
     return(
         <>
-        <h1>this is my home page</h1>
+        <h1>insert data</h1>
         </>
     )
 }
-export default Home;
+export default Insert;
