@@ -58,7 +58,7 @@
 // export default App;
 
 
-
+//colore changing program :-
 // import { useState } from "react"; 
 // const App=()=>{
 //   const [color,setColor]=useState("Red");//varble ki intialization state hai
@@ -76,61 +76,57 @@
 // }
 // export default App;
 
-// const App=()=>{
 
-//       const [cnt,setCnt]=useState(0);//varble ki intialization state hai
-//       const myDecreament=()=>{
-//         if(cnt<=1)
-//         {
-//           alert(" dont go minuse ")
-//         }else{
-//           setCnt(cnt-1)
-//         }
-//       }
+//COUNTER program increament decreament program:-
+// import React, { useState } from 'react';
+// const App = () => {
+//   const [cnt, setCnt] = useState(0); // Initialize state variable
+//   const myDecrement = () => {
+//     if (cnt <= 1) {
+//       alert("Don't go below zero");
+//     } else {
+//       setCnt(cnt - 1);
+//     }
+//   };
+//   return (
+//     <>
+//       <h1>Count App</h1>
+//       <h1>Count: {cnt}</h1>
+//       <button onClick={() => setCnt(cnt + 1)}>Increment</button>
+//       <button onClick={myDecrement}>Decrement</button>
+//       <button onClick={() => setCnt(0)}>Reset</button>
+//     </>
+//   );
+// };
+// export default App;
 
-//     return(
-//       <>
-//         <h1>Count App</h1>
-//         <h1>count :{cnt}</h1>
-//         <button onClick={()=>{setCnt(cnt+1)}}>increament</button>
-//         <button onClick={myDecreament }>decreament</button>
-//         <button onClick={()=>{setCnt(0)}}>reset</button>
-//       </>
-//     )
-//   }
-//   export default App;
-
-//2:-// import { useState,useEffect } from "react"; 
-// const App=()=>{
-
-//   const [cnt,setCnt]=useState(0);//varble ki intialization state hai
-//   useEffect(()=>{
+//
+// import { useState, useEffect } from "react";
+// const App = () => {
+//   const [cnt, setCnt] = useState(0);//varble ki intialization state hai
+//   useEffect(() => {
 //     setTimeout(() => {
-//       setCnt(cnt+1)
+//       setCnt(cnt + 1)
 //     }, 2000);
-//   },[])
-// return(
-//   <>
-//   <h1>welcom:{cnt}</h1>
-
-//   </>
-// )
+//   }, [])
+//   return (
+//     <>
+//       <h1>welcom:{cnt}</h1>
+//     </>
+//   )
 // }
 // export default App;
 
 
 
-
-
-// import { useState,useEffect } from "react"; 
+//Squer generate program:-
+// import { useState,useEffect } from "react";
 // const App=()=>{
 //   const [cnt,setCnt]=useState(0);
 //   const [abc,setAbc]=useState(0);
-
 //   useEffect(()=>{
 //     setAbc(cnt*2);
 //   },[cnt]);
-
 // return(
 //   <>
 //   <h1>welcom:{cnt}</h1>
@@ -141,26 +137,27 @@
 // }
 // export default App;
 
-// import { useState } from "react";
-// const App=()=>{
-//   const [name, setName]=useState("");
-//   const [city,setCity]=useState("");
-//   const [email,setEmail]=useState("");
 
-//   return(
-//     <>
-//     <h1>Application Form</h1>
-//     Enter name : <input type="text"  value={name} onChange={(e)=>setName(e.target.value)}/>
-//     <br/><br/>
-//     Enter city : <input type="text"  value={city} onChange={(e)=>setCity(e.target.value)}/>
-//     <br/><br/>
-//     Enter email : <input type="text"  value={email} onChange={(e)=>setEmail(e.target.value)}/>
-//     <br/><br/>
-//     <button >save data</button>
-//     </>
-//   )
-// }
-// export default App;
+
+import { useState } from "react";
+const App=()=>{
+  const [name, setName]=useState("");
+  const [city,setCity]=useState("");
+  const [email,setEmail]=useState("");
+  return(
+    <>
+    <h1>Application Form</h1>
+    Enter name : <input type="text"  value={name} onChange={(e)=>setName(e.target.value)}/>
+    <br/><br/>
+    Enter city : <input type="text"  value={city} onChange={(e)=>setCity(e.target.value)}/>
+    <br/><br/>
+    Enter email : <input type="text"  value={email} onChange={(e)=>setEmail(e.target.value)}/>
+    <br/><br/>
+    <button >save data</button>
+    </>
+  )
+}
+export default App;
 
 
 
@@ -172,7 +169,7 @@
 //   //input={name:"raju","city":"bhopal",contact:123456, email:"admin@gmail.com"}
 //   const handleInput=(e)=>{
 //     let name=e.target.name;
-//     let value=e.target.value; 
+//     let value=e.target.value;
 
 
 //     setInput((values)=>({...values,[name]:value}));
@@ -183,7 +180,7 @@
 //   }
 //   return(
 //     <>
-//     <h1>Application Form</h1>
+//
 //     Enter name: <input type="text" name="stunm" value={input.stunm} onChange={handleInput} />
 //     <br/>
 //     Enter city: <input type="text" name="city" value={input.city} onChange={handleInput} />
@@ -237,12 +234,12 @@
 //       {ans}
 //     </table>
 //   </>
-// ) 
+// )
 // }
 // export default App;
 
 
-// 
+//
 
 
 //installation command axios:-npm i axios
@@ -296,10 +293,3 @@
 // export default App;
 
 
-const App=()=>{
-  return(
-    <>
-        
-    </>
-  )
-}
