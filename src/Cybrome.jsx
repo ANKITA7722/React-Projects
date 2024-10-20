@@ -1,9 +1,10 @@
+import Bhopal from "./Bhopal";
 
 const Cybrome=()=>{
     return(
         <>
-        <h1 className="data">Student Rollno </h1>
-         
+        <h1>Student Rollno </h1>
+         <Bhopal/>
         </>
     )
 }

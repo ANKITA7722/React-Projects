@@ -1,5 +1,7 @@
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { useState } from "react";
+
 // import Layout from "./Layout";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -35,12 +37,8 @@
 // }  
 // export default App;
 
-
-
-
-//
+//=======================================================================================================
 // import { useState } from "react"; 
-
 // const App=()=>{
 //     const [name,setName]=useState("ankita");//varble ki intialization state hai
 //     const myname=()=>{
@@ -57,7 +55,7 @@
 // }
 // export default App;
 
-
+//======================================================================================================
 //colore changing program :-
 // import { useState } from "react"; 
 // const App=()=>{
@@ -76,7 +74,7 @@
 // }
 // export default App;
 
-
+//====================================================================================================================
 //COUNTER program increament decreament program:-
 // import React, { useState } from 'react';
 // const App = () => {
@@ -100,7 +98,7 @@
 // };
 // export default App;
 
-//
+//====================================================================================================================
 // import { useState, useEffect } from "react";
 // const App = () => {
 //   const [cnt, setCnt] = useState(0);//varble ki intialization state hai
@@ -118,7 +116,7 @@
 // export default App;
 
 
-
+//=====================================================================================================================
 //Squer generate program:-
 // import { useState,useEffect } from "react";
 // const App=()=>{
@@ -137,7 +135,7 @@
 // }
 // export default App;
 
-
+//=======================================================================================================
 //form create:-
 // import { useState } from "react";
 // const App=()=>{
@@ -292,16 +290,44 @@
 // }
 // export default App;
 
-import { useState } from "react";
-import Comp1 from "./comp1";
 
-const App=()=>{
-  const [user ,setUser]=useState("Ankita");
-  return(
-    <>
-    <h1>welcom ho my main page : {user}</h1>
-    <Comp1 user={user}/>
-    </>
-  )
-}
-export default App;
+//date:-17/10/2024 day:thursday
+// import { useState ,createContext} from "react";
+// import Comp1 from "./comp1";
+// const myContext = createContext(); 
+// const App=()=>{
+//   const [user ,setUser]=useState("Ankita");
+//   return(
+//     <>
+//     <h1>welcom ho my main page : {user}</h1>
+//     <myContext.Provider value={{user}}>
+//     <Comp1 />
+//     </myContext.Provider>
+
+//     </>
+//   )
+// }
+// export default App;
+// export {myContext};
+
+
+//Globale state Managment
+// import { useState ,createContext} from "react";
+// import Cybrome from "./Cybrome";
+// const userContext = createContext();
+
+// const App=()=>{
+//   const [user ,setUser] = useState("Ankita");
+//   return(
+//     <>
+//     <button onClick={()=>{setUser("nitin")}}>click</button>
+//     <h1>hello...:{user}</h1>
+//     <userContext.Provider value = {{user,setUser}}>
+//       <Cybrome/>
+//     </userContext.Provider>
+    
+//     </>
+//   )
+// }
+// export default App;
+// export {userContext};
